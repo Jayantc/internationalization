@@ -1,0 +1,6 @@
+welcome.message=Hello, welcome to my simple internationalization application!
+language.change=Change Language to
+language.english=English
+language.german=German
+language.french=French
+language.japanese=Japanese

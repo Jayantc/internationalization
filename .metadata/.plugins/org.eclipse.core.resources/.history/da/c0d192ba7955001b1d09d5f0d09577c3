@@ -1,0 +1,18 @@
+package com.i18n.demo;
+
+import java.util.Locale;
+
+import org.apache.tomcat.util.descriptor.LocalResolver;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+
+public class ApplicationConfig implements WebMvcConfigurer {
+
+	@Bean
+	public LocalResolver localResolver() {
+		SessionLocaleResolver localResolver = new SessionLocaleResolver();
+		localResolver.setDefaultLocale(Locale.US);
+		return localResolver;
+	}
+}

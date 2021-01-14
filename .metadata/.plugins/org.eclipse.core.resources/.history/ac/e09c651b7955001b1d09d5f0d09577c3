@@ -1,0 +1,5 @@
+package com.i18n.demo;
+
+public class ApplicationConfig {
+
+}

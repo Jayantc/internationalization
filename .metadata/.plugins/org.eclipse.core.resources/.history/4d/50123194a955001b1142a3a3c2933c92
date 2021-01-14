@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script></head>
+<body>
+<h1 th:text="#{welcome.message}"></h1>
+<span th:text="#{language.change}"></span>:
+<select id="locales">
+    <option value=""></option>
+    <option value="en" th:text="#{language.english}"></option>
+    <option value="de" th:text="#{language.german}"></option>
+    <option value="fr" th:text="#{language.french}"></option>
+    <option value="de" th:text="#{language.japanese}"></option>
+</select>
+<h1>Summary on Paris Agreement</h1>
+<text>
+	The Paris Agreement is a legally binding international treaty on climate change. It was adopted by 196 Parties at COP 21 in Paris, on 12 December 2015 and entered into force on 4 November 2016.
+
+Its goal is to limit global warming to well below 2, preferably to 1.5 degrees Celsius, compared to pre-industrial levels.
+
+To achieve this long-term temperature goal, countries aim to reach global peaking of greenhouse gas emissions as soon as possible to achieve a climate neutral world by mid-century.
+
+The Paris Agreement is a landmark in the multilateral climate change process because, for the first time, a binding agreement brings all nations into a common cause to undertake ambitious efforts to combat climate change and adapt to its effects.
+</text>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#locales").change(function () {
+            var selectedOption = $('#locales').val();
+            if (selectedOption != '') {
+                window.location.replace('?lang=' + selectedOption);
+            }
+        });
+    });
+</script>
+</html>
